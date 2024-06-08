@@ -1,0 +1,39 @@
+from starlette import status
+
+from v1.utils.responses import HTTP_200_OK, HTTP_201_CREATED, HTTP_202_ACCEPTED, HTTP_401_UNAUTHORIZED, HTTP_403_FORBIDDEN, HTTP_500_INTERNAL_SERVER_ERROR, HTTP_400_BAD_REQUEST, HTTP_422_UNPROCESSABLE_ENTITY, HTTP_503_SERVICE_UNAVAILABLE
+
+get_all_responses: dict = {
+    status.HTTP_200_OK: HTTP_200_OK.model_dump(),
+    status.HTTP_500_INTERNAL_SERVER_ERROR: HTTP_500_INTERNAL_SERVER_ERROR.model_dump()
+}
+
+get_one_responses: dict = {
+    status.HTTP_200_OK: HTTP_200_OK.model_dump(),
+    status.HTTP_500_INTERNAL_SERVER_ERROR: HTTP_500_INTERNAL_SERVER_ERROR.model_dump()
+}
+
+delete_all_responses: dict = {
+    status.HTTP_200_OK: HTTP_200_OK.model_dump(),
+    status.HTTP_500_INTERNAL_SERVER_ERROR: HTTP_500_INTERNAL_SERVER_ERROR.model_dump()
+}
+
+post_responses: dict = {
+    status.HTTP_201_CREATED: HTTP_201_CREATED.model_dump(),
+    status.HTTP_202_ACCEPTED: HTTP_202_ACCEPTED.model_dump(),
+    status.HTTP_400_BAD_REQUEST: HTTP_400_BAD_REQUEST.model_dump(),
+    status.HTTP_401_UNAUTHORIZED: HTTP_401_UNAUTHORIZED.model_dump(),
+    status.HTTP_403_FORBIDDEN: HTTP_403_FORBIDDEN.model_dump(),
+    status.HTTP_422_UNPROCESSABLE_ENTITY: HTTP_422_UNPROCESSABLE_ENTITY.model_dump(),
+    status.HTTP_500_INTERNAL_SERVER_ERROR: HTTP_500_INTERNAL_SERVER_ERROR.model_dump(),
+    status.HTTP_503_SERVICE_UNAVAILABLE: HTTP_503_SERVICE_UNAVAILABLE.model_dump(),
+}
+
+update_responses: dict = {
+    status.HTTP_202_ACCEPTED: HTTP_202_ACCEPTED.model_dump(),
+    status.HTTP_400_BAD_REQUEST: HTTP_400_BAD_REQUEST.model_dump(),
+    status.HTTP_401_UNAUTHORIZED: HTTP_401_UNAUTHORIZED.model_dump(),
+    status.HTTP_403_FORBIDDEN: HTTP_403_FORBIDDEN.model_dump(),
+    status.HTTP_422_UNPROCESSABLE_ENTITY: HTTP_422_UNPROCESSABLE_ENTITY.model_dump(),
+    status.HTTP_500_INTERNAL_SERVER_ERROR: HTTP_500_INTERNAL_SERVER_ERROR.model_dump(),
+    status.HTTP_503_SERVICE_UNAVAILABLE: HTTP_503_SERVICE_UNAVAILABLE.model_dump(),
+}
